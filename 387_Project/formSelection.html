@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Homepage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="hpstylesheet.css" />
+  <link rel="stylesheet" href="formSelection.css" />
+
+</head>
+
+
+<body class="container">
+  <header class="main-header">
+    <img src="http://www.olemiss.edu/_images/logo/OleMissScript_186white-2x.png" alt="logo">
+    <h1 id="welcome" class="logo-text"></h1>
+
+  </header>
+
+  <div class="main-content" id="content">
+    <button type="submit" id="btnalign" class="btn btn-gray"><a href="Homepage.html">Back</a></button>
+
+<select name="form" id="form" onchange="location = this.value;">
+    <option value="" selected="selected">Select a form</option>
+    <option class="render-wrap" value="formbuilder.html">Form 1</option>
+
+
+</select>
+
+<div class="fb-render">
+  <textarea id="fb-template"><form-template> <fields> <field name="select-1454177070204" label="Select" style="multiple" description="" required="false" className="form-control" type="select" > <option value="option-1">Option 1</option> <option value="option-2">Option 2</option> </field> <field name="rich-text-1454177067296" label="Text Area" description="" className="form-control" required="false" type="textarea" /> </fields> </form-template></textarea>
+</div>
+
+
+  </div>
+
+
+<script type="text/javascript">
+
+
+  </script>
+  <!---FireBase------>
+      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDTGLCOx-WehBD06sppMi0GwXB8kC1MdKk",
+          authDomain: "group8-project.firebaseapp.com",
+          databaseURL: "https://group8-project.firebaseio.com",
+          projectId: "group8-project",
+          storageBucket: "group8-project.appspot.com",
+          messagingSenderId: "905962274385"
+        };
+         firebase.initializeApp(config);
+      </script>
+  <!---FireBase------>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.1/jquery.rateyo.min.js"></script>
+    <script src="Homepage.js"></script>
+    <script src="formSelection.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!---
+bootstrap 4
+--->
+<html>
+	<head>
+		<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<meta charset="utf-8">
+		<title>Login Page</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylesheet.css"/>
+	</head>
+	<body>
+		<div >
+			<image src="http://www.olemiss.edu/_images/logo/OleMissScript_186white-2x.png"/>
+		</div>
+		<form>
+		  <div class="form-group form-inline">
+		    <label for="email">Email address</label>
+		    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+		    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+		  </div>
+		  <div class="form-group form-inline">
+		    <label for="exampleInputPassword1">Password</label>
+		    <input type="password" class="form-control" id="password" placeholder="Password" required>
+		  </div>
+			<div class="btn btn-group btn-inline">
+		  <button type="submit" id="login" class="btn btn-gray mr-3"><a>Login</a></button>
+			<button type="submit" id="register" class="btn btn-gray"><a href="register.html">Register</></button>
+		</div>
+		</form>
+
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!---FireBase------>
+				<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+				<script>
+				  // Initialize Firebase
+				  var config = {
+				    apiKey: "AIzaSyDTGLCOx-WehBD06sppMi0GwXB8kC1MdKk",
+				    authDomain: "group8-project.firebaseapp.com",
+				    databaseURL: "https://group8-project.firebaseio.com",
+				    projectId: "group8-project",
+				    storageBucket: "group8-project.appspot.com",
+				    messagingSenderId: "905962274385"
+				  };
+					 firebase.initializeApp(config);
+				</script>
+		<!---FireBase------>
+		<script src="login.js"></script>
+	</body>
+</html>

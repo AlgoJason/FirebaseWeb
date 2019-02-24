@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!---
+bootstrap 4
+--->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=yes">
+		<title>Register Your Account</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylesheet.css"/>
+	</head>
+
+
+
+	<body>
+		<body class="container">
+  <header class="main-header">
+    <img src="http://www.olemiss.edu/_images/logo/OleMissScript_186white-2x.png" alt="logo">
+    <h1 class="logo-text">Register Your Account</h1>
+  </header>
+
+		<form  register-account>
+		  <div class="form-group form-inline">
+		    <label for="emailAddress">Email address</label>
+		    <input class="form-control" type="email" id="emailAddress" aria-describedby="emailHelp" placeholder="student@go.olemiss.edu" pattern=".+@go.olemiss.edu">
+		  </div>
+		  <div class="form-group form-inline">
+		    <label for="password">Password</label>
+		    <input class="form-control" id="regPassword" >
+		  </div>
+			<div class="form-group form-inline">
+				<label for="firstname">First Name</label>
+				<input class="form-control" id="firstName" required pattern="[a-zA-Z\s]+">
+			</div>
+			<div class="form-group form-inline">
+				<label for="lastname">Last Name</label>
+				<input class="form-control" id="lastName" required pattern="[a-zA-Z\s]+">
+			</div>
+			<div class="form-group form-inline">
+				<label for="olemissid">OleMiss ID#</label>
+				<input class="form-control" id="olemissID">
+			</div>
+<!--
+			<div class="form-group">
+				<label for="userType">Type of Account:</label>
+				<select id="userType" class="form-control" name="userType">
+					<option value="caramel">Student</option>
+					<option value="almond">Staff</option>
+					<option value="mocha">Admin</option>
+				</select>
+			</div>
+-->
+<div class="radio">
+	<label>
+		<input type="radio" name="userType" id=student value="student">
+		Student
+	</label>
+</div>
+
+<div class="radio">
+	<label>
+	<input type="radio" name="userType" id=staff value="staff">
+	Faculty
+</label>
+</div>
+
+<div class="radio">
+	<label>
+	<input type="radio" name="userType" id=admin value="admin">
+	Admin
+</label>
+
+</div>
+
+		  <button type="button" onclick="submitClick()" id="btnalign" id="submitBtn" class="btn btn-gray align-center">Submit</button>
+		</form>
+		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<!---FireBase------>
+				<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+				<script>
+				  // Initialize Firebase
+				  var config = {
+				    apiKey: "AIzaSyDTGLCOx-WehBD06sppMi0GwXB8kC1MdKk",
+				    authDomain: "group8-project.firebaseapp.com",
+				    databaseURL: "https://group8-project.firebaseio.com",
+				    projectId: "group8-project",
+				    storageBucket: "group8-project.appspot.com",
+				    messagingSenderId: "905962274385"
+				  };
+					 firebase.initializeApp(config);
+				</script>
+		<!---FireBase------>
+		<script src="register.js"></script>
+		<script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+	</body>
+</html>

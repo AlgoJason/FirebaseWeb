@@ -1,0 +1,41 @@
+body {
+  color: white;
+  background-color: #14223d !important;
+}
+
+form {
+  margin-top: 2%;
+  margin-left: 42%;
+  margin-right: 42%;
+}
+
+.main-header{
+  float: left;
+}
+.main-header img{
+  float: left;
+}
+
+.container{
+  padding-top: 30px;
+
+}
+
+img {
+  margin-left: 40%;
+  margin-right: 42%;
+  margin-top: 10%;
+}
+
+a:hover {
+  text-decoration: none !important;
+}
+
+#login {
+  border-radius: 25px;
+  margin-left: -10px;
+}
+
+#register {
+border-radius: 25px;
+}

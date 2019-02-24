@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Homepage</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  <link rel="stylesheet" href="hpstylesheet.css" />
+</head>
+
+
+<body class="container">
+  <header class="main-header">
+    <img src="http://www.olemiss.edu/_images/logo/OleMissScript_186white-2x.png" alt="logo">
+    <h1 id="welcome" class="logo-text"></h1>
+
+  </header>
+
+  <div class="main-content" id="content">
+    <button type="submit" id="btnalign" class="btn btn-gray"><a href="login.html">Sign Out</a></button>
+
+    <nav id="usertabs">
+      <ul class="clearfix">
+        <li><a href="#activity" class="sel">Recent Activity</a></li>
+        <li><a href="#userForms" class="">My Forms</a></li>
+        <li><a href="#availForms" class="">Available Forms</a></li>
+        <li><a href="#reportIssue" class="">Report an Issue</a></li>
+      </ul>
+    </nav>
+
+    <section id="activity">
+      <p><strong>Most recent actions:</strong></p>
+      <p class="activity">4/15/2018 @10:15AM - Form 23s9fa8 submitted </p>
+      <p class="activity">4/15/2018 @3:50PM - Form 23s9fa8 accepted </p>
+      <p class="activity">4/21/2018 @8:15PM - Form af319a1 submitted </p>
+      <p class="activity">4/22/2018 @4:30PM - <strong>Admin</strong> has signed Form af319a1 </p>
+      <p class="activity">4/23/2018 @1:30PM - Form af319a1 accepted </p>
+
+    </section>
+
+    <section id="userForms" class="hidden">
+      <p class="userForms">Form 23s9fa8 <i>submitted at 4/15/2018 @10:15AM</i> - Accepted </p>
+      <p class="userForms">Form af319a1 <i>submitted at 4/21/2018 @8:15PM</i> - Accepted </p>
+
+
+
+    </section>
+
+    <section id="availForms" class="hidden">
+      <h2>Forms Available</h2>
+      <a id="createForm" href="formbuilder.html" style="padding-left:10px;">Create a Form</a>
+      <a id="viewForms" href="formSelection.html"  style="padding-left:10px;">View Forms</a>
+    </section>
+
+    <section id="reportIssue" class="hidden">
+      <p>Questions or having trouble?</p>
+      <p>Technical assistance: <a href="mailto:helpdesk@olemiss.edu">helpdesk@olemiss.edu</a></p>
+      <p>Call: (123)-456-7890 </p>
+
+    </section>
+
+  </div>
+
+<script type="text/javascript">
+
+      $('#usertabs ul li a').on('click', function(e) {
+        e.preventDefault();
+        var newcontent = $(this).attr('href');
+
+        $('#usertabs ul li a').removeClass('sel');
+        $(this).addClass('sel');
+
+        $('#content section').each(function() {
+          if (!$(this).hasClass('hidden')) {
+            $(this).addClass('hidden');
+          }
+        });
+
+        $(newcontent).removeClass('hidden');
+      });
+
+  </script>
+  <!---FireBase------>
+      <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDTGLCOx-WehBD06sppMi0GwXB8kC1MdKk",
+          authDomain: "group8-project.firebaseapp.com",
+          databaseURL: "https://group8-project.firebaseio.com",
+          projectId: "group8-project",
+          storageBucket: "group8-project.appspot.com",
+          messagingSenderId: "905962274385"
+        };
+         firebase.initializeApp(config);
+      </script>
+  <!---FireBase------>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+    <script src="Homepage.js"></script>
+    <script src="register.js"></script>
+</body>
+
+</html>
